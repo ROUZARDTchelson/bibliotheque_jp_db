@@ -1,0 +1,249 @@
+/* ==========================================
+   VARIABLES GLOBALES
+========================================== */
+:root {
+    --main-color: #2b6777;
+    --secondary-color: #52ab98;
+    --danger-color: #c94c4c;
+    --danger-hover: #ff6b6b;
+    --light-bg: #f5f7fa;
+    --text-color: #333;
+    --white: #fff;
+}
+
+/* ==========================================
+   RESET & BODY
+========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+header {
+    text-align: center;
+    padding: 2em 1em;
+    background-color: var(--main-color);
+    color: var(--white);
+}
+
+header h1 {
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+header a {
+    display: inline-block;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 0.5em;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   MAIN
+========================================== */
+main {
+    flex: 1;
+    max-width: 1100px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* Sections */
+.section-box {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.section-box h2 {
+    margin-bottom: 12px;
+    color: var(--main-color);
+    font-size: 1.25rem;
+}
+
+/* Formulaires */
+.section-box label {
+    display: block;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #222;
+}
+
+.section-box input[type="text"],
+.section-box input[type="number"],
+.section-box textarea,
+.section-box select,
+.section-box input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 1px solid #cfcfcf;
+    font-size: 0.95rem;
+    background: #fbfbfb;
+}
+
+.section-box textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Boutons */
+button, .btn-submit {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 14px;
+    margin-top: 14px;
+    border: none;
+    border-radius: 8px;
+    background: var(--main-color);
+    color: var(--white);
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+button:hover, .btn-submit:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.02);
+}
+
+/* Bouton supprimer */
+.btn-delete, .delete-btn {
+    background-color: var(--danger-color);
+}
+
+.btn-delete:hover, .delete-btn:hover {
+    background-color: var(--danger-hover);
+}
+
+/* Messages */
+.msg-success {
+    background: #e6ffef;
+    border: 1px solid #bfeacb;
+    color: #1f7a43;
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+/* ==========================================
+   TABLEAUX
+========================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5em;
+    overflow-x: auto;
+    display: block;
+}
+
+th, td {
+    padding: 0.8em;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: var(--main-color);
+    color: var(--white);
+}
+
+tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* Boutons dans tableaux */
+table button {
+    width: auto;
+    padding: 0.5em 1em;
+}
+
+/* ==========================================
+   DETAILS
+========================================== */
+.details, .details-container {
+    max-width: 700px;
+    margin: 2em auto;
+    padding: 2em;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.details-container h2 {
+    color: var(--main-color);
+}
+
+.details-container p {
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+.details-container button {
+    background-color: var(--main-color);
+}
+
+.details-container button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+footer {
+    text-align: center;
+    padding: 1.5em;
+    background-color: var(--main-color);
+    color: var(--white);
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+@media (max-width: 980px) {
+    .modifier-grid { display: block; }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 1em;
+        margin: 1em;
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+
+    button, .btn-submit, .btn-delete, .delete-btn {
+        width: 100%;
+        margin-top: 0.5em;
+    }
+}

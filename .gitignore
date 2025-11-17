@@ -1,0 +1,17 @@
+# Dossiers à ignorer
+vendor/
+node_modules/
+
+# Fichiers sensibles
+.env
+
+# Logs
+*.log
+
+# Config éditeurs
+.idea/
+.vscode/
+
+# Autres
+.DS_Store
+Thumbs.db
