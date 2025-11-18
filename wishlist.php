@@ -1,5 +1,12 @@
-<?php
-// wishlist.php
+<?php 
+session_start();
+
+// Vérifie si l'utilisateur est connecté
+if (!isset($_SESSION['id_lecteur'])) {
+    header("Location: login.php");
+    exit();
+}
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -10,10 +17,10 @@ if ($conn->connect_error) {
     die("Connexion échouée : " . $conn->connect_error);
 }
 
-$id_lecteur = 1; // temporaire
+// Utiliser l'ID du lecteur connecté
+$id_lecteur = $_SESSION['id_lecteur'];
 
 // --- Suppression d’un livre de la liste ---
-// Ici on utilise id_livre comme identifiant à supprimer dans la table liste_lecture
 if (isset($_POST['supprimer_id'])) {
     $id_livre = intval($_POST['supprimer_id']);
     if ($id_livre > 0) {
@@ -39,13 +46,14 @@ $result = $stmt->get_result();
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Ma liste de lecture - Bibliothèque en ligne</title>
+    <title>Ma liste de lecture - Bibliothèque Jacques Premier</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <h1>Ma liste de lecture</h1>
         <a href="index.php">Retour à l'accueil</a>
+        <a href="logout.php" class="btn-logout">|Se déconnecter</a>
     </header>
 
     <main>
@@ -79,7 +87,7 @@ $result = $stmt->get_result();
     </main>
 
     <footer>
-        <p>&copy; 2025 Bibliothèque en Ligne</p>
+        <p>&copy; 2025 Bibliothèque en Ligne | Développé par Tchelson Rouzard</p>
     </footer>
 </body>
 </html>

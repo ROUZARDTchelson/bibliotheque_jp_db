@@ -44,8 +44,9 @@ $livre = $result->fetch_assoc();
 <body>
 <header>
     <h1><?= htmlspecialchars($livre['titre']) ?></h1>
-    <a href="index.php">Retour</a> |
+    <a href="index.php">Retour à l'acceuil|</a> 
     <a href="wishlist.php">Ma liste de lecture</a>
+    <a href="logout.php" class="btn-logout">|Se déconnecter</a>
 </header>
 
 <main class="details">
@@ -137,7 +138,7 @@ $livre = $result->fetch_assoc();
 </main>
 
 <footer>
-    <p>&copy; 2025 Bibliothèque en Ligne</p>
+    <p>&copy; 2025 Bibliothèque en Ligne | Développé par Tchelson Rouzard</p>
 </footer>
 </body>
 </html>

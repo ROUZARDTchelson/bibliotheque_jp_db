@@ -66,7 +66,8 @@ if (isset($_GET['recherche'])) {
     <header>
         <h1>Résultats de la recherche</h1>
         <p>Résultats pour : <strong><?= htmlspecialchars($terme) ?></strong></p>
-        <a href="index.html"> Retour à l'accueil</a>
+        <a href="index.php"> Retour à l'accueil</a>
+        <a href="logout.php" class="btn-logout">|Se déconnecter</a>
     </header>
 
     <main>
@@ -106,7 +107,7 @@ if (isset($_GET['recherche'])) {
 
         <hr><br>
 
-        <!-- 🟦 SECTION : AJOUT D'UN LIVRE -->
+        <!-- SECTION : AJOUT D'UN LIVRE -->
         <section>
             <h2>Ajouter un nouveau livre</h2>
 
@@ -144,7 +145,7 @@ if (isset($_GET['recherche'])) {
     </main>
 
     <footer>
-        <p>&copy; 2025 Bibliothèque en Ligne</p>
+        <p>&copy; 2025 Bibliothèque en Ligne | Développé par Tchelson Rouzard</p>
     </footer>
 </body>
 </html>

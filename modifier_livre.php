@@ -105,16 +105,12 @@ if (isset($_POST['supprimer'])) {
     <meta charset="UTF-8">
     <title>Gestion des livres</title>
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        body { font-family: Arial; background:#f0f0f0; padding:20px; }
-        .section-box { background:white; padding:20px; margin-bottom:30px; border-radius:10px; width:500px; }
-        input, textarea, select { width:100%; padding:8px; margin-bottom:10px; }
-        button { padding:10px; cursor:pointer; }
-        h2 { margin-top:0; }
-    </style>
 </head>
 <body>
+<header>
+        <h1>Modifier et/ou Supprimer un livre</h1>
+        <a href="index.html"> Retour à l'accueil</a>
+    </header>
 
 <?php if (isset($_GET['msg'])): ?>
     <p style="color:green; font-weight:bold;">
@@ -172,6 +168,8 @@ if (isset($_POST['supprimer'])) {
         </button>
     </form>
 </div>
-
+<footer>
+    <p>&copy; 2025 Bibliothèque en Ligne | Développé par Tchelson Rouzard</p>
+</footer>
 </body>
 </html>
